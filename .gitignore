@@ -1,0 +1,9 @@
+.kilo/
+Project 1 Behavioral Signal Pipeline (Mini MarkTag 337366f45d6d811493a4fa7bae798d08.md
+node_modules/
+.env
+dist/
+*.log
+.DS_Store
+.vscode/
+.idea/

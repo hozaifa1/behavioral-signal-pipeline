@@ -1,0 +1,26 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model UserProfile {
+  userId   String   @id // primary key
+  sessions Int      @default(0)
+  avgScroll Float   @default(0)
+  lastSeen DateTime @updatedAt
+}
+
+model RawEvent {
+  id          String   @id @default(cuid())
+  userId      String
+  eventType   String
+  scrollDepth Float
+  pageUrl     String
+  timestamp   DateTime
+}
